@@ -1,0 +1,10 @@
+C:\Users\Laci\source\repos\RentaBook\RentaBook\obj\Debug\RentaBook.csprojAssemblyReference.cache
+C:\Users\Laci\source\repos\RentaBook\RentaBook\obj\Debug\RentaBook.Form1.resources
+C:\Users\Laci\source\repos\RentaBook\RentaBook\obj\Debug\RentaBook.Properties.Resources.resources
+C:\Users\Laci\source\repos\RentaBook\RentaBook\obj\Debug\RentaBook.csproj.GenerateResource.cache
+C:\Users\Laci\source\repos\RentaBook\RentaBook\obj\Debug\RentaBook.csproj.CoreCompileInputs.cache
+C:\Users\Laci\source\repos\RentaBook\RentaBook\bin\Debug\RentaBook.exe.config
+C:\Users\Laci\source\repos\RentaBook\RentaBook\bin\Debug\RentaBook.exe
+C:\Users\Laci\source\repos\RentaBook\RentaBook\bin\Debug\RentaBook.pdb
+C:\Users\Laci\source\repos\RentaBook\RentaBook\obj\Debug\RentaBook.exe
+C:\Users\Laci\source\repos\RentaBook\RentaBook\obj\Debug\RentaBook.pdb
