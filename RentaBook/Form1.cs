@@ -62,9 +62,57 @@ namespace RentaBook
                 comboBox_Carte.SelectedIndex = -1;
          }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void comboBox_Librarie_SelectedIndexChanged(object sender, EventArgs e)
         {
+            reseteaza_Carte();
+            incarca_Carte();
+        }
+
+        private void button_Inchiriezi_Click(object sender, EventArgs e)
+        {
+            int i, gasit;
+            string nume_cli = textBox_Nume.Text.Trim();
+            string carte_sel;
+            try
+            {
+                if (comboBox_Carte.SelectedIndex == -1)
+                    throw new Exception("Va rugam selectati un film");
+                if (nume_cli == "")
+                    throw new Exception("Va rugam tastati un nume");
+                carte_sel = comboBox_Carte.SelectedItem.ToString();
+                gasit = 0;
+                for(i = 0; i < carte.Length && gasit == 0; i++)
+                {
+                    if(carte[i] == carte_sel)
+                    {
+                        inchiriate_clienti[i] = nume_cli;
+                        gasit = 1;
+                    }
+                }
+                int nrzile = dateTimePicker1.Value.Subtract(DateTime.Now).Days + 1;
+                label5_Mesaj.Text = nume_cli + " - a inchiriat filmul -- " + carte_sel + " -- " + " pentru " + nrzile + "zile";
+                reseteaza_Carte();
+                incarca_Carte();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Eroare");
+            }
 
         }
+
+        private void button_Reset_Click(object sender, EventArgs e)
+        {
+            comboBox_Librarie.SelectedIndex = 0;
+            dateTimePicker1.Value = DateTime.Now.AddDays(1);
+            textBox_Nume.Text = "";
+            label5_Mesaj.Text = "";
+            reseteaza_Carte();
+            incarca_Carte();
+        }
+
+        
+
+     
     }
 }
